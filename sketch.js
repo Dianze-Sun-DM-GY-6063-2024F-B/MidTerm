@@ -9,8 +9,8 @@ function setup() {
   player = {
     x: width / 2,
     y: height / 2,
-    size: 200,
-    speed: 15
+    size: 70,
+    speed: 12
   };
 
 
@@ -18,9 +18,9 @@ function setup() {
     enemies.push({
       x: random(width),
       y: random(height),
-      size: 150,
-      speedX: random(-7, 7),
-      speedY: random(-5, 5)
+      size: 50,
+      speedX: random(-3, 3),
+      speedY: random(-3, 3)
     });
   }
 }
@@ -59,7 +59,7 @@ function Player() {
   pop();
   push();
    fill(0);
-  rect(player.x, player.y+70, player.size, player.size/4);
+  rect(player.x, player.y+50, player.size, player.size/4);
   pop();
 }
 
