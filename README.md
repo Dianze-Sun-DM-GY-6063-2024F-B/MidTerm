@@ -1,6 +1,34 @@
 # p5.js Template
 MIDTERM
+WEEK3
+1. Enhanced Slicing System
+The heart of my project is a slicing system that lets players cut enemies in half, creating dynamic and engaging gameplay. Each enemy can be sliced twice, and to manage this, I implemented a splited variable that tracks how many times an enemy has been cut. When an enemy is sliced, it is removed from the array, and two smaller rectangular pieces are added in its place, simulating the effect of being chopped. This way, the enemies can only be divided twice, which not only controls the number of objects on the screen but also ensures that the game runs smoothly without overloading the computer.
 
+Implementation Details:
+
+When an enemy is struck, the original enemy is split into two smaller parts, and both pieces inherit properties like position and rotation. This gives the illusion of a seamless slicing action.
+I use the splited variable to prevent enemies from being sliced indefinitely. Once an enemy has been split twice, it can’t be divided further.
+2. Random Rotation Effect
+To add more realism and chaos to the slicing effect, I introduced a random rotation for the sliced parts. This was achieved using a variable r that assigns a random rotation to each piece, making every slice visually unique and unpredictable.
+
+Design Choice:
+
+The random rotation angle gives each piece a dynamic look, mimicking the unpredictable nature of real combat. It adds an element of chaos to the scene, enhancing the sense of action and violence.
+The variability ensures that every playthrough feels different, with enemies falling and spinning in various ways.
+3. Infinite Enemy Generation
+To maintain the intensity and continuous action, I implemented a system where enemies are endlessly generated. When an enemy is sliced for the first time, a new enemy spawns at a random location on the screen. This keeps the game challenging and ensures that players are always engaged.
+
+How It Works:
+
+New enemies are generated only when an enemy is sliced for the first time (when splited is 0). This way, the battlefield is never empty, and the player is constantly surrounded by new threats.
+This mechanic creates a relentless, never-ending fight, which mirrors the non-stop action and tension in Kill Bill.
+4. Blood Splatter Effect
+To fully capture the film’s signature aesthetic, I developed a blood splatter system that adds visual impact to each slice. Blood particles are generated whenever an enemy is cut, creating a scene that becomes increasingly chaotic and blood-soaked over time.
+
+Details of the Blood System:
+
+Blood particles are divided into two types: smaller droplets (stored in the blood array) and larger splatters (stored in the blood2 array). This variation adds depth and realism to the blood effects.
+Each slice produces 30 small droplets and 10 large splatters. These particles are randomly distributed around the point of impact, using random() to create a natural and chaotic spread.
 WEEK2
 
 This week, I attempted to write code to slice a rectangular prism, but I encountered technical challenges and was unable to complete it. This project proved to be somewhat difficult for me, so I decided to adjust my goals and focus on something more manageable. Ultimately, I decided to develop game-like interaction about Kill Bill,where the player can use the WASD keys to control movement and press the spacebar to slice enemies, leaving behind blood splatters.
